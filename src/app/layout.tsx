@@ -1,23 +1,27 @@
 import { ReactNode } from 'react'
 import '../styles/globals.css'
-import { Rubik, Karla } from 'next/font/google'
+import { Libre_Baskerville as Libre, DM_Sans as DMSans } from 'next/font/google'
 import { Providers } from '@/components/Provider'
 import { Header } from '@/components/layout/Header'
 
-const rubik = Rubik({
+const libre = Libre({
   subsets: ['latin'],
-  variable: '--font-rubik',
+  weight: ['400', '700'],
+  variable: '--font-libre',
 })
 
-const karla = Karla({
+const dmSans = DMSans({
   subsets: ['latin'],
-  variable: '--font-karla',
+  weight: ['400', '500', '700'],
+  variable: '--font-dm-sans',
 })
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${rubik.variable} ${karla.variable}`}>
+      <body
+        className={`${libre.variable} ${dmSans.variable} h-screen bg-zinc-50 text-zinc-900 dark:bg-zinc-900 dark:text-zinc-100`}
+      >
         <Providers>
           <Header />
           <div className="flex flex-1">{children}</div>
