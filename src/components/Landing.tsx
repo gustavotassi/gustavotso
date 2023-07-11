@@ -1,5 +1,6 @@
-import Image from 'next/image'
-import globeSvg from '@/assets/globe.svg'
+import { ContactMe } from './ContactMe'
+import { HoveringGlobe } from './HoveringGlobe'
+import { Social } from './Social'
 
 export function Landing() {
   return (
@@ -9,21 +10,23 @@ export function Landing() {
           <p className="font-bold uppercase tracking-widest">
             Software Engineer
           </p>
-          <Image
-            className="invert-90 dark:invert-0"
-            src={globeSvg}
-            alt="globe icon"
-            height={42}
-            width={42}
-          />
+
+          <HoveringGlobe />
         </div>
         <h1 className="font-alt text-6xl font-bold leading-tight">
           Gustavo Tassi
         </h1>
 
         <p className="font-bold uppercase tracking-widest">
-          When excellence meets innovation. Worldwide.
+          Where skillful coding meets perfection.{' '}
+          <span className="bg-gradient-to-r from-purple-600 to-pink-600 px-1 text-white">
+            Worldwide.
+          </span>
         </p>
+
+        <Social />
+
+        <ContactMe />
       </div>
     </div>
   )
