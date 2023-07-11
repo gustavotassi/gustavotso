@@ -9,8 +9,14 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: 'var(--font-karla)',
-        alt: 'var(--font-rubik)',
+        sans: 'var(--font-dm-sans)',
+        alt: 'var(--font-libre)',
+      },
+      invert: {
+        25: '.25',
+        50: '.5',
+        75: '.75',
+        90: '.90',
       },
     },
   },
