@@ -7,7 +7,7 @@ import { motion } from 'framer-motion'
 export function HoveringGlobe() {
   return (
     <motion.div
-      className="flex items-start gap-2 p-4"
+      className="flex items-start gap-2"
       initial={{ translateY: -3, rotateZ: -4, rotateY: -4 }}
       animate={{ translateY: 3, rotateZ: 4, rotateY: 4 }}
       transition={{
