@@ -18,11 +18,11 @@ export function HoveringGlobe() {
       }}
     >
       <Image
-        className="invert-90 dark:invert-0"
+        className="h-11 w-11 invert-90 dark:invert-0"
         src={globeSvg}
         alt="globe icon"
-        height={42}
-        width={42}
+        height={128}
+        width={128}
       />
     </motion.div>
   )

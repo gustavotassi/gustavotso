@@ -1,4 +1,4 @@
-import { socialMediaItems } from '../config'
+import { socialMediaItems } from '../../config'
 import Image from 'next/image'
 
 export function Social() {
