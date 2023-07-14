@@ -1,4 +1,5 @@
-import { Landing } from '@/components/Landing'
+import { Landing } from '@/components/landing/Landing'
+import { Projects } from '@/components/projects/Projects'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -11,6 +12,8 @@ export default function Home() {
   return (
     <div>
       <Landing />
+
+      <Projects />
     </div>
   )
 }
