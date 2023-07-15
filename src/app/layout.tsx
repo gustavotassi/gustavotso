@@ -3,6 +3,7 @@ import '../styles/globals.css'
 import { Libre_Baskerville as Libre, DM_Sans as DMSans } from 'next/font/google'
 import { Providers } from '@/components/Provider'
 import { Header } from '@/components/layout/Header'
+import { Footer } from '@/components/layout/Footer'
 
 const libre = Libre({
   subsets: ['latin'],
@@ -20,11 +21,12 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body
-        className={`${libre.variable} ${dmSans.variable} h-screen bg-zinc-50 text-zinc-900 dark:bg-zinc-900 dark:text-zinc-100`}
+        className={`${libre.variable} ${dmSans.variable} h-screen bg-zinc-50 font-sans text-zinc-900 dark:bg-zinc-900 dark:text-zinc-100`}
       >
         <Providers>
           <Header />
           <div className="flex flex-1">{children}</div>
+          <Footer />
         </Providers>
       </body>
     </html>
