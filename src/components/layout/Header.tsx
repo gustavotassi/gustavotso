@@ -1,6 +1,6 @@
 export function Header() {
   return (
-    <div className="space-between flex">
+    <div className="flex justify-between">
       {/** Logo */}
       <div></div>
 
