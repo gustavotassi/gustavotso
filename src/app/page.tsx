@@ -1,3 +1,4 @@
+import { Experience } from '@/components/experience/Experience'
 import { Landing } from '@/components/landing/Landing'
 import { Projects } from '@/components/projects/Projects'
 import { Metadata } from 'next'
@@ -14,6 +15,8 @@ export default function Home() {
       <Landing />
 
       <Projects />
+
+      <Experience />
     </div>
   )
 }
