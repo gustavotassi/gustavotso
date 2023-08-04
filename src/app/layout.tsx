@@ -25,7 +25,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       >
         <Providers>
           <Header />
-          <div className="flex flex-1">{children}</div>
+          <div className="flex flex-1 md:justify-center">{children}</div>
           <Footer />
         </Providers>
       </body>
