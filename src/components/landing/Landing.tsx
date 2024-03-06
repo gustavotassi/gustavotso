@@ -50,15 +50,15 @@ export function Landing() {
             </div>
 
             <motion.div
-              initial={{ translateX: 16, rotateZ: 40 }}
+              initial={{ translateX: 16, rotateZ: 30 }}
               animate={{ translateX: 0, rotateZ: 0 }}
               transition={{
                 repeat: Infinity,
-                duration: 1.6,
+                duration: 1.2,
                 repeatType: 'mirror',
                 ease: 'easeInOut',
               }}
-              className="text-2xl"
+              className="text-3xl"
             >
               👈
             </motion.div>
