@@ -4,7 +4,7 @@ import { Projects } from '@/components/projects/Projects'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'GUSTAVO TASSI - Software Engineer',
+  title: 'GUSTAVO TASSI SOUZA - Software Engineer',
   description:
     'My portfolio that I created using React, Next.js and TailwindCSS',
 }

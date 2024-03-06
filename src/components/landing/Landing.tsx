@@ -16,7 +16,7 @@ export function Landing() {
             <HoveringGlobe />
           </div>
           <h1 className="font-alt text-6xl font-bold leading-tight lg:text-7xl">
-            Gustavo Tassi
+            Gustavo T. Souza
           </h1>
 
           <p className="text-zinc-400 lg:text-xl">
@@ -36,16 +36,32 @@ export function Landing() {
           <Social />
 
 
-          <div className="flex flex-col md:items-center">
-            <h1 className="text-gray-500 w-fit bg-gradient-to-r from-green-700/60 to-green-500/60 bg-[length:100%_10%] bg-bottom bg-no-repeat px-2 font-alt text-2xl lg:text-3xl font-bold leading-tight">
-              #OpenToWork
-            </h1>
-            <h1 className="text-gray-400 w-fit bg-gradient-to-r from-green-500 to-green-700 bg-[length:100%_10%] bg-bottom bg-no-repeat px-2 font-alt text-2xl lg:text-3xl font-bold leading-tight">
-              #OpenToWork
-            </h1>
-            <h1 className="text-gray-300 w-fit bg-gradient-to-r from-green-700 to-green-500 bg-[length:100%_10%] bg-bottom bg-no-repeat px-2 font-alt text-2xl lg:text-3xl font-bold leading-tight">
-              #OpenToWork
-            </h1>
+          <div className="flex flex-row items-center gap-2">
+            <div className="flex flex-col">
+              <h1 className="text-gray-500 w-fit bg-gradient-to-r from-green-700/60 to-green-500/60 bg-[length:100%_10%] bg-bottom bg-no-repeat px-2 font-alt text-2xl font-bold leading-tight">
+                #OpenToWork
+              </h1>
+              <h1 className="text-gray-400 w-fit bg-gradient-to-r from-green-500 to-green-700 bg-[length:100%_10%] bg-bottom bg-no-repeat px-2 font-alt text-2xl font-bold leading-tight">
+                #OpenToWork
+              </h1>
+              <h1 className="text-gray-300 w-fit bg-gradient-to-r from-green-700 to-green-500 bg-[length:100%_10%] bg-bottom bg-no-repeat px-2 font-alt text-2xl font-bold leading-tight">
+                #OpenToWork
+              </h1>
+            </div>
+
+            <motion.div
+              initial={{ translateX: 16, rotateZ: 40 }}
+              animate={{ translateX: 0, rotateZ: 0 }}
+              transition={{
+                repeat: Infinity,
+                duration: 1.6,
+                repeatType: 'mirror',
+                ease: 'easeInOut',
+              }}
+              className="text-2xl"
+            >
+              👈
+            </motion.div>
           </div>
 
           <ContactMe />
