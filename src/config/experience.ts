@@ -11,7 +11,7 @@ export const workExperiences: WorkExperience[] = [
     image: cometCashImage,
     roles: [Role.FULL, Role.MOBILE],
     workFrom: 'Jun 2023',
-    workTo: 'now',
+    workTo: 'Jan 2024',
     location: 'Remote',
     journeyType: Journey.FULL,
     isFreelance: false,

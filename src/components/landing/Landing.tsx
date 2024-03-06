@@ -27,8 +27,26 @@ export function Landing() {
           </p>
         </div>
 
-        <motion.div initial={{ translateY: -8, opacity: 0 }} animate={{ translateY: 0, opacity: 1 }} transition={{ delay: 0.3 }} className="flex flex-col gap-12 md:justify-between">
+        <motion.div
+          initial={{ translateY: -8, opacity: 0 }}
+          animate={{ translateY: 0, opacity: 1 }}
+          transition={{ delay: 0.3 }}
+          className="flex flex-col gap-12 md:justify-between"
+        >
           <Social />
+
+
+          <div className="flex flex-col md:items-center">
+            <h1 className="text-gray-500 w-fit bg-gradient-to-r from-green-700/60 to-green-500/60 bg-[length:100%_10%] bg-bottom bg-no-repeat px-2 font-alt text-2xl lg:text-3xl font-bold leading-tight">
+              #OpenToWork
+            </h1>
+            <h1 className="text-gray-400 w-fit bg-gradient-to-r from-green-500 to-green-700 bg-[length:100%_10%] bg-bottom bg-no-repeat px-2 font-alt text-2xl lg:text-3xl font-bold leading-tight">
+              #OpenToWork
+            </h1>
+            <h1 className="text-gray-300 w-fit bg-gradient-to-r from-green-700 to-green-500 bg-[length:100%_10%] bg-bottom bg-no-repeat px-2 font-alt text-2xl lg:text-3xl font-bold leading-tight">
+              #OpenToWork
+            </h1>
+          </div>
 
           <ContactMe />
         </motion.div>
