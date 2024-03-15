@@ -36,7 +36,7 @@ export function Landing() {
           <Social />
 
 
-          <div className="flex flex-row items-center gap-2">
+          {/* <div className="flex flex-row items-center gap-2">
             <div className="flex flex-col">
               <h1 className="text-gray-500 w-fit bg-gradient-to-r from-green-700/60 to-green-500/60 bg-[length:100%_10%] bg-bottom bg-no-repeat px-2 font-alt text-2xl font-bold leading-tight">
                 #OpenToWork
@@ -62,7 +62,7 @@ export function Landing() {
             >
               👈
             </motion.div>
-          </div>
+          </div> */}
 
           <ContactMe />
         </motion.div>

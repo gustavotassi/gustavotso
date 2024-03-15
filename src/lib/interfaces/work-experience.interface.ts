@@ -4,6 +4,7 @@ import { Journey, Role } from '../enums'
 export interface WorkExperience {
   roles: Role[]
   image: StaticImageData
+  link?: string
   company: string
   workFrom: string
   workTo: string

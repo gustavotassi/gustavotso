@@ -1,7 +1,7 @@
 'use client'
 
 import { workExperiences } from '@/config'
-import { Calendar, Clock, MapPin } from 'lucide-react'
+import { Calendar, Clock, ExternalLink, MapPin } from 'lucide-react'
 import { ExperienceRole } from './ExperienceRole'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
@@ -38,7 +38,11 @@ export function Experience() {
                   width={256}
                 />
               </div>
-              <h1 className="flex gap-4 font-alt text-3xl leading-tight">
+              {experience.link ? <a href={experience.link} target='_blank' className="flex gap-4 font-alt text-3xl leading-tight w-fit">
+                {experience.company}
+
+                <ExternalLink className="w-4 h-4" />
+              </a> : <h1 className="flex gap-4 font-alt text-3xl leading-tight">
                 {experience.company}
 
                 {experience.isFreelance && (
@@ -46,7 +50,7 @@ export function Experience() {
                     Freelance
                   </div>
                 )}
-              </h1>
+              </h1>}
             </section>
 
             {/** Time worked there */}
