@@ -7,6 +7,14 @@ import Image from 'next/image'
 import { motion } from 'framer-motion'
 
 export function Experience() {
+  const renderFreelanceTag = () => {
+    return (
+      <div className="h-fit rounded-full bg-red-800 px-2 font-sans text-sm">
+        Freelance
+      </div>
+    )
+  }
+  
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.7 }} className="m-auto w-full place-items-start px-4 font-sans">
       <h1 className="w-fit bg-gradient-to-r from-blue-900 to-blue-700 bg-[length:100%_10%] bg-bottom bg-no-repeat px-2 font-alt text-3xl lg:text-4xl font-bold leading-tight">
@@ -42,14 +50,12 @@ export function Experience() {
                 {experience.company}
 
                 <ExternalLink className="w-4 h-4" />
+
+                {experience.isFreelance && renderFreelanceTag()}
               </a> : <h1 className="flex gap-4 font-alt text-3xl leading-tight">
                 {experience.company}
 
-                {experience.isFreelance && (
-                  <div className="h-fit rounded-full bg-red-800 px-2 font-sans text-sm">
-                    Freelance
-                  </div>
-                )}
+                {experience.isFreelance && renderFreelanceTag()}
               </h1>}
             </section>
 
