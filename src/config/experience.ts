@@ -3,6 +3,7 @@ import { WorkExperience } from '@/lib/interfaces'
 import cometCashImage from '@/assets/cometcash.jpeg'
 import unionTechImage from '@/assets/union.jpg'
 import bitCapitalImage from '@/assets/bitcapital.jpeg'
+import databindImage from '@/assets/databind.jpeg'
 import acrelecImage from '@/assets/acrelec.png'
 import freImage from '@/assets/fre.jpeg'
 
@@ -17,6 +18,17 @@ export const workExperiences: WorkExperience[] = [
     location: 'Brazil - Remote',
     journeyType: Journey.FULL,
     isFreelance: false,
+  },
+  {
+    company: 'Databind',
+    image: databindImage,
+    link: 'https://databind.com.br/',
+    roles: [Role.FRONT],
+    workFrom: 'Dec 2024',
+    workTo: 'now',
+    location: 'Brazil - Remote',
+    journeyType: Journey.PART,
+    isFreelance: true,
   },
   {
     company: 'Comet Cash',
@@ -34,7 +46,7 @@ export const workExperiences: WorkExperience[] = [
     image: unionTechImage,
     roles: [Role.FRONT],
     workFrom: 'Dec 2022',
-    workTo: 'now',
+    workTo: 'Nov 2023',
     location: 'Brazil - Remote',
     journeyType: Journey.PART,
     isFreelance: true,
