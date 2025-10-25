@@ -3,7 +3,7 @@ import { WorkExperience } from '@/lib/interfaces'
 import cometCashImage from '@/assets/cometcash.jpeg'
 import unionTechImage from '@/assets/union.jpg'
 import bitCapitalImage from '@/assets/bitcapital.jpeg'
-import databindImage from '@/assets/databind.jpeg'
+import databindImage from '@/assets/databind.png'
 import acrelecImage from '@/assets/acrelec.png'
 import freImage from '@/assets/fre.jpeg'
 
