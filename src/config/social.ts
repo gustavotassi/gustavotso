@@ -15,11 +15,5 @@ export const socialLinks: SocialLink[] = [
     handle: 'gustavotassi',
     link: 'https://github.com/gustavotassi',
     icon: githubIcon,
-  },
-  {
-    label: 'Instagram',
-    handle: '_gustavotassi',
-    link: 'https://www.instagram.com/_gustavotassi/',
-    icon: instagramIcon,
-  },
+  }
 ]
