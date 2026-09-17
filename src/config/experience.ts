@@ -1,12 +1,13 @@
-import { Journey, Role } from '@/lib/enums'
-import { WorkExperience } from '@/lib/interfaces'
-import cometCashImage from '@/assets/cometcash.jpeg'
-import unionTechImage from '@/assets/union.jpg'
-import bitCapitalImage from '@/assets/bitcapital.jpeg'
-import databindImage from '@/assets/databind.png'
 import acrelecImage from '@/assets/acrelec.png'
+import bitCapitalImage from '@/assets/bitcapital.jpeg'
+import cometCashImage from '@/assets/cometcash.jpeg'
+import databindImage from '@/assets/databind.png'
 import freImage from '@/assets/fre.jpeg'
+import unionTechImage from '@/assets/union.jpg'
+import { Journey, Role } from '@/lib/enums'
+import type { WorkExperience } from '@/lib/interfaces'
 
+/** Reverse chronological: current roles first, then the way back. */
 export const workExperiences: WorkExperience[] = [
   {
     company: 'Acrelec',
@@ -14,19 +15,20 @@ export const workExperiences: WorkExperience[] = [
     link: 'https://acrelec.com/',
     roles: [Role.FULL],
     workFrom: 'Apr 2024',
-    workTo: 'now',
-    location: 'Brazil - Remote',
+    workTo: 'Present',
+    location: 'Remote · Brazil',
     journeyType: Journey.FULL,
     isFreelance: false,
   },
   {
     company: 'Databind',
     image: databindImage,
+    invertOnLight: true,
     link: 'https://databind.com.br/',
     roles: [Role.FRONT],
     workFrom: 'Dec 2024',
-    workTo: 'now',
-    location: 'Brazil - Remote',
+    workTo: 'Sep 2026',
+    location: 'Remote · Brazil',
     journeyType: Journey.PART,
     isFreelance: true,
   },
@@ -37,7 +39,7 @@ export const workExperiences: WorkExperience[] = [
     roles: [Role.FULL, Role.MOBILE],
     workFrom: 'Jun 2023',
     workTo: 'Jan 2024',
-    location: 'USA - Remote',
+    location: 'Remote · USA',
     journeyType: Journey.FULL,
     isFreelance: false,
   },
@@ -47,18 +49,17 @@ export const workExperiences: WorkExperience[] = [
     roles: [Role.FRONT],
     workFrom: 'Dec 2022',
     workTo: 'Nov 2023',
-    location: 'Brazil - Remote',
+    location: 'Remote · Brazil',
     journeyType: Journey.PART,
     isFreelance: true,
   },
   {
-    company: 'Bit Capital - AME Digital',
+    company: 'Bit Capital · AME Digital',
     image: bitCapitalImage,
-    link: 'https://www.bitcapital.com.br/',
     roles: [Role.FULL],
     workFrom: 'Nov 2021',
     workTo: 'May 2023',
-    location: 'Brazil - Remote',
+    location: 'Remote · Brazil',
     journeyType: Journey.FULL,
     isFreelance: false,
   },
@@ -69,7 +70,7 @@ export const workExperiences: WorkExperience[] = [
     roles: [Role.FULL, Role.MOBILE],
     workFrom: 'Oct 2020',
     workTo: 'Nov 2021',
-    location: 'Boituva, SP',
+    location: 'Boituva · Brazil',
     journeyType: Journey.FULL,
     isFreelance: false,
   },

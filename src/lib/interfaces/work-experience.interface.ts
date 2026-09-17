@@ -1,11 +1,13 @@
-import { StaticImageData } from 'next/dist/shared/lib/get-img-props'
-import { Journey, Role } from '../enums'
+import type { StaticImageData } from 'next/image'
+import type { Journey, Role } from '@/lib/enums'
 
 export interface WorkExperience {
-  roles: Role[]
-  image: StaticImageData
-  link?: string
   company: string
+  image: StaticImageData
+  /** True for white-on-transparent logos, which need flipping in light mode. */
+  invertOnLight?: boolean
+  link?: string
+  roles: Role[]
   workFrom: string
   workTo: string
   location: string

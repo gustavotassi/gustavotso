@@ -1,18 +1,25 @@
-import linkedInIcon from '../assets/linkedin.svg'
-import githubIcon from '../assets/github.svg'
-import instagramIcon from '../assets/instagram.svg'
+import githubIcon from '@/assets/github.svg'
+import instagramIcon from '@/assets/instagram.svg'
+import linkedInIcon from '@/assets/linkedin.svg'
+import type { SocialLink } from '@/lib/interfaces'
 
-export const socialMediaItems = [
+export const socialLinks: SocialLink[] = [
   {
+    label: 'LinkedIn',
+    handle: 'in/gustavo-tassi-souza',
     link: 'https://www.linkedin.com/in/gustavo-tassi-souza-22187214a/',
-    imageSrc: linkedInIcon,
+    icon: linkedInIcon,
   },
   {
+    label: 'GitHub',
+    handle: 'gustavotassi',
     link: 'https://github.com/gustavotassi',
-    imageSrc: githubIcon,
+    icon: githubIcon,
   },
   {
+    label: 'Instagram',
+    handle: 'gustavotassi_',
     link: 'https://www.instagram.com/gustavotassi_/',
-    imageSrc: instagramIcon,
+    icon: instagramIcon,
   },
 ]
