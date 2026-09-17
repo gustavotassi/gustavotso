@@ -18,8 +18,8 @@ export const socialLinks: SocialLink[] = [
   },
   {
     label: 'Instagram',
-    handle: 'gustavotassi_',
-    link: 'https://www.instagram.com/gustavotassi_/',
+    handle: '_gustavotassi',
+    link: 'https://www.instagram.com/_gustavotassi/',
     icon: instagramIcon,
   },
 ]
