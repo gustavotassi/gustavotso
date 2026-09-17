@@ -1,22 +1,17 @@
-import { Experience } from '@/components/experience/Experience'
-import { Landing } from '@/components/landing/Landing'
-import { Projects } from '@/components/projects/Projects'
-import { Metadata } from 'next'
-
-export const metadata: Metadata = {
-  title: 'GUSTAVO TASSI SOUZA - Software Engineer',
-  description:
-    'My portfolio that I created using React, Next.js and TailwindCSS',
-}
+import { Contact } from '@/components/sections/Contact'
+import { Experience } from '@/components/sections/Experience'
+import { Hero } from '@/components/sections/Hero'
+import { Projects } from '@/components/sections/Projects'
+import { Stack } from '@/components/sections/Stack'
 
 export default function Home() {
   return (
-    <div>
-      <Landing />
-
-      <Projects />
-
+    <>
+      <Hero />
+      <Stack />
       <Experience />
-    </div>
+      <Projects />
+      <Contact />
+    </>
   )
 }

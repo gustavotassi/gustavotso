@@ -1,34 +1,61 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# gustavotso
 
-## Getting Started
+Personal portfolio of Gustavo T. Souza — a single, minimal page: an intro that
+types the name in eight different faces, the stack, the work history, the
+projects, and a
+way to get in touch.
 
-First, run the development server:
+## Stack
+
+- [Next.js 16](https://nextjs.org) (App Router, Turbopack) + React 19
+- [Tailwind CSS 4](https://tailwindcss.com) — configured from CSS, no JS config
+- [next-themes](https://github.com/pacocoursey/next-themes) for the Paper / Ink toggle
+- `next/font` for every typeface, self-hosted at build time
+
+No animation library: the intro and the entrance choreography are CSS keyframes
+plus a small state machine.
+
+## Running it
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+npm install
+npm run dev     # http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+```bash
+npm run build     # production build
+npm run lint      # eslint
+npm run typecheck # tsc --noEmit
+npm run format    # prettier
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Where things live
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+| Path | What |
+| --- | --- |
+| `src/config/site.ts` | Name, role, tagline, location, calendar link |
+| `src/config/stack.ts` | The tech grouped by category for the Stack section |
+| `src/config/experience.ts` | Work history rendered by the Experience section |
+| `src/config/projects.ts` | Projects rendered by the Projects section |
+| `src/config/social.ts` | Social links |
+| `src/components/intro/` | The loading curtain and the reveal it triggers |
+| `src/components/sections/` | Hero, Stack, Experience, Projects, Contact |
+| `src/lib/fonts.ts` | Every font, including the eight used by the intro |
+| `src/styles/globals.css` | Theme tokens, keyframes, base styles |
 
-## Learn More
+## Themes
 
-To learn more about Next.js, take a look at the following resources:
+The site ships two themes, named on the page: **Paper** (light) and **Ink**
+(dark, the default). next-themes writes the active one as a class on `<html>`,
+and every color is a CSS variable (`--bg`, `--fg`, `--muted`, `--accent`…)
+defined once in `globals.css` and exposed to Tailwind through `@theme inline`,
+so `bg-bg`, `text-muted` and friends follow the theme automatically.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Two custom utilities carry the rest: `label` for the uppercase micro copy (the
+site uses no monospace anywhere) and `icon-adapt` for white-on-transparent logos
+that need flipping on Paper.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Deploying
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Set `NEXT_PUBLIC_SITE_URL` to the canonical URL so metadata and Open Graph tags
+point at the right place. Everything is statically prerendered.
